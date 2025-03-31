@@ -4,35 +4,50 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-}
-
-header {
+  }
+  
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-}
-
-h1, h2, h3 {
+  }
+  
+  h1, h2, h3 {
     color: #bb86fc;
-}
-
-.project {
+  }
+  
+  #introduction {
+    margin-bottom: 40px;
+  }
+  
+  /* Project styling with initial hidden state */
+  .project {
     background-color: #333;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-}
-
-.download-button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* Class to apply once the project comes into view */
+  .project.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .download-button {
     padding: 10px 20px;
     background-color: #6200ee;
     color: #fff;
     text-decoration: none;
     border: none;
     border-radius: 5px;
-}
-
-.download-button:hover {
+  }
+  
+  .download-button:hover {
     background-color: #3700b3;
-}
+  }
+  
